@@ -10,8 +10,12 @@ module.exports = {
     filename: '[name].bundle.js',
      path: path.resolve(__dirname, 'dist'),
      clean: true,
+     publicPath: '/test',
   },
   devtool: 'inline-source-map',
+  devServer: {
+    contentBase: './dist',
+  },
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Development',
